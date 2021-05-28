@@ -294,7 +294,18 @@ img {
   display: inline-flex;
   align-items: center;
 }
-
+.button--small {
+  padding: 0.75rem 1rem;
+}
+.button--link {
+  padding: 0;
+  background-color: transparent;
+  color: var(--first-color);
+}
+.button--link:hover {
+  background-color: transparent;
+  color: var(--first-color-alt);
+}
 /* About */
 .about__img {
   width: 200px;
@@ -330,108 +341,181 @@ img {
 }
 
 /* Skills */
-.skills__container{
+.skills__container {
   row-gap: 0;
 }
-.skills__header{
+.skills__header {
   display: flex;
   align-items: center;
   margin-bottom: var(--mb-2-5);
   cursor: pointer;
 }
 .skills__icon,
-.skills__arrow{
+.skills__arrow {
   font-size: 2rem;
   color: var(--first-color);
 }
-.skills__icon{
+.skills__icon {
   margin-right: var(--mb-0-75);
 }
-.skills__title{
+.skills__title {
   font-size: var(--h3-font-size);
 }
-.skills__subtitle{
+.skills__subtitle {
   font-size: var(--small-font-size);
   color: var(--text-color-light);
 }
-.skills__arrow{
+.skills__arrow {
   margin-left: auto;
-  transition: .4s;
+  transition: 0.4s;
 }
-.skills__list{
+.skills__list {
   row-gap: 1.5rem;
   padding-left: 2.7rem;
 }
-.skills__titles{
+.skills__titles {
   display: flex;
   justify-content: space-between;
   margin-bottom: var(--mb-0-5);
 }
-.skills__name{
+.skills__name {
   font-size: var(--normal-font-size);
   font-weight: var(--font-medium);
 }
 .skills__bar,
-.skills__percentage{
+.skills__percentage {
   height: 5px;
-  border-radius: .25rem;
-
+  border-radius: 0.25rem;
 }
-.skills__bar{
+.skills__bar {
   background-color: var(--first-color-lighter);
 }
-.skills__percentage{
+.skills__percentage {
   display: block;
   background-color: var(--first-color);
 }
-.skills__html{
+.skills__html {
   width: 95%;
 }
-.skills__css{
+.skills__css {
   width: 84%;
 }
-.skills__javascript{
+.skills__javascript {
   width: 80%;
 }
-.skills__react{
+.skills__react {
   width: 76%;
 }
 
-.skills__nodejs{
+.skills__nodejs {
   width: 92%;
 }
-.skills__expressjs{
+.skills__expressjs {
   width: 80%;
 }
-.skills__mongodb{
+.skills__mongodb {
   width: 86%;
 }
-.skills__firebase{
+.skills__firebase {
   width: 79%;
 }
 
-.skills__figma{
+.skills__figma {
   width: 93%;
 }
-.skills__adobexd{
+.skills__adobexd {
   width: 96%;
 }
-.skills__photoshop{
+.skills__photoshop {
   width: 83%;
 }
 
-.skills__git{
+.skills__git {
   width: 91%;
 }
-.skills__close
-.skills__list{
+.skills__close .skills__list {
   height: 0;
   overflow: hidden;
 }
-.skills__open{
+.skills__open {
   height: max-content;
   margin-bottom: var(--mb-2-5);
 }
-.skills__open .skills__arrow{
+.skills__open .skills__arrow {
   transform: rotate(-180deg);
+}
+
+/* Services */
+.services__container {
+  gap: 1.5rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+.services__content {
+  position: relative;
+  background-color: var(--container-color);
+  padding: 3.5rem 0.5rem 1.25rem 1.5rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  transition: 0.3s;
+}
+.services__content:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+.services__icon {
+  display: block;
+  font-size: 1.7rem;
+  color: var(--first-color);
+  margin-bottom: var(--mb-1);
+}
+.services__title {
+  font-size: var(--h3-font-size);
+  margin-bottom: var(--mb-1);
+  font-weight: var(--font-medium);
+}
+.services__button {
+  cursor: pointer;
+  font-size: var(--small-font-size);
+}
+.services__button:hover .button__icon {
+  transform: translateX(0.25rem);
+}
+.services__modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  z-index: var(--z-model);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+.services__modal-content {
+  position: relative;
+  background-color: var(--container-color);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+}
+.services__modal-title {
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-medium);
+  margin-bottom: var(--mb-1-5);
+}
+.services__modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  color: var(--first-color);
+  cursor: pointer;
+}
+/* active model */
+.active-modal {
+  opacity: 1;
+  visibility: visible;
 }
