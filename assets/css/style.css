@@ -294,6 +294,13 @@ img {
   display: inline-flex;
   align-items: center;
 }
+.button--white{
+  background-color: #fff;
+  color: var(--first-color);
+}
+.button--white:hover{
+  background-color: rgb(248, 248, 248);
+}
 .button--small {
   padding: 0.75rem 1rem;
 }
@@ -570,3 +577,28 @@ img {
 .swiper-pagination-bullet{
   outline: none;
 }
+
+/* project in mind */
+.project{
+  text-align: center;
+}
+.project__bg{
+  background-color: var(--first-color-second);
+  padding-top: 3rem;
+
+}
+.project__title{
+  font-size: var(--h2-font-size);
+  margin-bottom: var(--mb-0-75);
+}
+.project__description{
+  margin-bottom: var(--mb-1-5);
+}
+.project__title,.project__description{
+  color: #fff;
+}
+.project__button{
+  margin-bottom: var(--mb-1-5);
+}
+
+/* contact  */
