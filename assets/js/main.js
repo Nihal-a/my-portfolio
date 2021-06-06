@@ -161,3 +161,20 @@ themeButton.addEventListener("click", () => {
   localStorage.setItem("selected-theme", getCurrentTheme());
   localStorage.setItem("selected-icon", getCurrentIcon());
 });
+// Contact form submission
+$("#submit-form").submit((e) => {
+  e.preventDefault();
+  $.ajax({
+    url: "https://script.google.com/macros/s/AKfycbw-x2XKY5Hm-ODBOb2ohie32lNpZzxV2HJmQZI37WKtqmDaLZx1vWNe9eeh22Di0exyWg/exec",
+    data: $("#submit-form").serialize(),
+    method: "post",
+    success: function (response) {
+      alert("Form submitted successfully");
+      window.location.reload();
+      //window.location.href="https://google.com"
+    },
+    error: function (err) {
+      alert("Something Error");
+    },
+  });
+});
